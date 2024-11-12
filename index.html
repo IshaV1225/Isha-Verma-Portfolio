@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isha Verma - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a41ba57178.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+    <nav>
+        <img src="images/logo.png" class="logo">
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#my-experience">Experience</a></li>
+            <li><a href="#my-projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+        <p>Software Developer</p>
+        <h1>Hi, I'm <span>Isha Verma</span></h1>
+    </div>
+    </div>  
+</div>
+<!------------------------------About ME--------------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/me_1.jpg " alt="" class="about-img">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p class="about-text">A dedicated Computer Engineer who is driven by a passion of engineering solutions for challenging, relevant problems. 
+                    Strongly proficient—with years of experience—in Python, Java, C, and the web development suite (JavaScript, React.js, HTML, CSS), 
+                    I excel in writing elegant code and using a varied set of tools to tackle complex issues, as shown in my experience and projects.
+                    My strong problem-solving skills, meticulous attention to detail and a firm desire to learn and adapt quickly drive my commitment for excellence in the field.
+                    I'm pursuing software development and cloud infrastructure roles where I can apply my diverse technical skills and work with innovative teams towards their goals and products.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Designing Web/App interfaces</li>
+                            <li><span>App Development</span><br>Building Android Apps</li>
+                            <li><span>Embeded Software Development</span><br>Building micro-controller software</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Present</span><br>Designing Web/App interfaces</li>
+                            <li><span>Jan 2022 - Dec 2022</span><br>Designing Web/App interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>Portfolio Website</span><br>Designing Web/App interfaces</li>
+                            <li><span>Capstone Project</span><br>Designing Web/App interfaces</li>
+                            <li><span>Robotic Snow Blower</span><br>Designing Web/App interfaces</li>
+                            <li><span>Digital Attendance</span><br>Building Android Apps</li>
+                            <li><span>Text Messaging</span><br>Building micro-controller software</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019</span><br>BEng. in Computer Systems<br>From Carleton University</li>
+                        </ul>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------------Experience--------------------------------->
+<div id="my-experience">
+    <div class="container">
+        <h1 class="sub-title">Experience</h1>
+        <div class="experience-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Paraverse Studio</h2>
+                <p>Software Developer at Paraverse Studio</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-laptop"></i>
+                <h2>Mi Presence Inc</h2>
+                <p>Software Developer at Mi Presence Inc.</p>
+                <a href="#">Learn more</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!------------------------------Projects--------------------------------->
+<div id="my-projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="Images/capstone.jpg">
+                <div class="layer">
+                    <h3>ExaMobil</h3>
+                    <p>Final year autonomous attendance marking robot</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Images/snowplow.png">
+                <div class="layer">
+                    <h3>Autonomous Snow Plow</h3>
+                    <p>Autonomous snow plowing robot</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Images/examap.png">
+                <div class="layer">
+                    <h3>ExaMap</h3>
+                    <p>Digital attendance, exam room entrance, and booklet assignment system</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!------------------------------Contact--------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> vermaishaca@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> +1 (647)542-0778</p>
+                <p><a href="https://www.linkedin.com/in/ishaverma1225/" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i>ishaverma1225</a></p>
+                <a href="Images/Isha Verma Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="youremail@example.com" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; Isha Verma</p>
+    </div>
+</div>
+
+
+</body>
+
+<script>
+    // script for About Me section
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        // Remove the "active-link" class from all tab links
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        // Remove the "active-tab" class from all tab contents
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        // Add "active-link" to the clicked tab link
+        event.currentTarget.classList.add("active-link");
+        // Add "active-tab" to the tab content with the matching ID
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    // script for open and close menu of About me section for smaller screens
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    // script for contact form
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz8qT1et2ZWDHDvYog4c6d-RWJeUEtkub8qPnZvO1hPioVpFmX9sfYQQPj_HWEUkzw4/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.resent()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+</html>
