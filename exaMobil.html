@@ -4,9 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExaMobil</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
 </head>
 <body>
+ <!----------------------------------------------------Navigation Bar----------------------------------------->
+ <div id="header">
+    <div class="container">
+    <nav>
+        <img src="Images/logo.png" class="logo">
+        <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    </div>  
+</div>
+
+<!----------------------------------------------------About ExaMobil------------------------------------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/capstone.jpg " alt="" class="exaMobil-img">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About ExaMobil</h1>
+                <p class="about-text">A dedicated Computer Engineer who is driven by a passion of engineering solutions for challenging, relevant problems. 
+                    Strongly proficient—with years of experience—in Python, Java, C, and the web development suite (JavaScript, React.js, HTML, CSS), 
+                    I excel in writing elegant code and using a varied set of tools to tackle complex issues, as shown in my experience and projects.
+                    My strong problem-solving skills, meticulous attention to detail and a firm desire to learn and adapt quickly drive my commitment for excellence in the field.
+                    I'm pursuing software development and cloud infrastructure roles where I can apply my diverse technical skills and work with innovative teams towards their goals and products.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('purpose')">Purpose</p>
+                        <p class="tab-links" onclick="opentab('features')">Features</p>
+                        <p class="tab-links" onclick="opentab('hardware')">Hardware</p>
+                        <p class="tab-links" onclick="opentab('software')">Software</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="purpose">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Designing Web interfaces</li>
+                            <li><span>App Development</span><br>Building Android Apps</li>
+                            <li><span>Embeded Software Development</span><br>Building micro-controller software</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="features">
+                        <ul>
+                            <li><span>Aug 2023 - Present</span><br>Designing Web/App interfaces</li>
+                            <li><span>Jan 2022 - Dec 2022</span><br>Designing Web/App interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="hardware">
+                        <ul>
+                            <li><span>Portfolio Website</span><br>Designed Web/App interfaces</li>
+                            <li><span>ExaMobil: Capstone Project</span><br>Built an exam attendance autonomous rover facilitating exam-related tasks</li>
+                            <li><span>Robotic Snow Blower</span><br>Built an autonomous rover to clear snow from driveway</li>
+                            <li><span>ExaMap: Digital Attendance System</span><br>Digital exam attendance and booklet assignment platform</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="software">
+                        <ul>
+                            <li><span>2019</span><br>BEng. in Computer Systems<br>From Carleton University</li>
+                        </ul>
+                    </div> 
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // script for About Me section
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        // Remove the "active-link" class from all tab links
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        // Remove the "active-tab" class from all tab contents
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        // Add "active-link" to the clicked tab link
+        event.currentTarget.classList.add("active-link");
+        // Add "active-tab" to the tab content with the matching ID
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<script>
+    // script for open and close menu of About me section for smaller screens
+    var sidemenu = document.getElementById("sidemenu");
     
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
 </body>
 </html>

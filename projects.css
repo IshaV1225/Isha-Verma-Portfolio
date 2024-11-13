@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background: #080808;
+    color: #fff;
+}
+
+.logo {
+    width: 130px;
+}
+
+.container{
+    padding: 9px 9%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-left: auto; /* Pushes the entire ul to the right */
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+nav ul li a::after{
+    content:'';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text {
+    margin-top: 20%;
+    font-size: 20px;   
+}
+.header-text h1{
+    font-size: 50px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color:#ff004f;
+}
+
+/*---------------------About ExaMobil------------------ */
+#about {
+    padding: 60px 40px;
+    color: #ababab
+}
+.exaMobil-img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    padding-bottom: 15px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+.about-text{
+    padding-top: 10px;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: none;
+    font-family: 'Poppins', sans-serif;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+    line-height: 1.5;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+    line-height: 1.5;
+}
+
+/*-----------------------About ExaMap---------------------------*/
+.exaMap-img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+/*-------------------About Snow Plowing Rover-------------------*/
+.snowPlow-img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
