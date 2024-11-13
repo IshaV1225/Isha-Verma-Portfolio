@@ -68,7 +68,7 @@ nav ul li a:hover::after{
 
 /*---------------------About ExaMobil------------------ */
 #about {
-    padding: 60px 40px;
+    padding: 30px 5px;
     color: #ababab
 }
 .exaMobil-img{
@@ -82,15 +82,12 @@ nav ul li a:hover::after{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .about-col-1{
     flex-basis: 35%;
 }
-
 .about-col-2{
     flex-basis: 60%;
 }
-
 .sub-title{
     padding-bottom: 15px;
     font-size: 30px;
@@ -108,7 +105,6 @@ nav ul li a:hover::after{
     display: flex;
     margin: 20px 0 40px;
 }
-
 .tab-links{
     margin-right: 50px;
     font-size: 18px;
@@ -141,7 +137,6 @@ nav ul li a:hover::after{
 .tab-contents{
     display: none;
 }
-
 .tab-contents.active-tab{
     display: block;
     line-height: 1.5;
@@ -175,15 +170,15 @@ nav ul li a:hover::after{
 .tab-contents ul li{
     list-style: none;
     margin: 10px 0;
+    font-size: 15px;
 }
 .tab-contents ul li span{
     color: #b54769;
-    font-size: 14px;
+    font-size: 16px;
 }
 .tab-contents{
     display: none;
 }
-
 .tab-contents.active-tab{
     display: block;
     line-height: 1.5;
