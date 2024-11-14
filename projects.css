@@ -94,6 +94,18 @@ nav ul li a:hover::after{
     font-weight: 600;
     color: #fff;
 }
+.timeline{
+    padding-bottom: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #ababab;
+}
+.role{
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #b54769;
+}
 .about-text{
     padding-top: 10px;
     line-height: 1.5;
