@@ -33,6 +33,12 @@
                 <img src="Images/checking-in.png" alt="">
                 <img src="Images/Pos_tap.png" alt="">
                 <img src="Images/QR_code_map.png" alt="">
+                <video autoplay controls>
+                    <source src="Images/PoS_UI.mp4" type="video/mp4">
+                </video>
+                <video autoplay controls>
+                    <source src="Images/ExaMap Admin System.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About ExaMap</h1>
@@ -146,7 +152,8 @@
                         Using RFID-based check-ins and QR code mapping, ExaMap provides a secure, efficient solution for tracking each 
                         student's attendance and linking solution booklets to their records. The platform operates across three subsystems:
                         Access Control, PoS (Point of Sale), and an Administrative Dashboard. Together, these subsystems ensure a structured,
-                        auditable, and user-friendly examination process, reducing manual effort and enhancing data accuracy and security. 
+                        auditable, and user-friendly examination process, reducing manual effort and enhancing data accuracy and security. Moreover,
+                        the data collected is securely stored on cloud database to ensure backups and real-time access for the administrative website.
                         Here's how each sub-system functions:
                         
                         <h4>1. Access Control Sub-system</h4> 
@@ -158,11 +165,11 @@
                         </p> 
                         <br>
                         <h4>2. PoS (Point of Sale) Sub-system</h4>
-                        <p> This sub-system serves as a handheld tool for exam proctors, facilitating quick and accurate attendance 
+                        <p> This sub-system serves as a handheld tool for exam proctors with an onboard UI, facilitating quick and accurate attendance 
                             recording during the exam. Through a tap-based RFID check-in, the PoS Subsystem verifies each student's
-                             attendance and associates their unique ID with the exam session. Additionally, it uses an onboard camera 
-                             to scan QR codes on solution booklets, mapping each booklet to the corresponding student’s record. This 
-                             functionality reduces manual effort and ensures precise tracking of exam materials.
+                            attendance and associates their unique ID with the exam session. Additionally, it uses an onboard Pi-Camera 
+                            to scan QR codes on solution booklets, mapping each booklet to the corresponding student's record. This 
+                            functionality reduces manual effort and ensures precise and digital tracking of exam materials.
                         </p>
                         <br>
                         <h4>3. Administrative Sub-system</h4> 
