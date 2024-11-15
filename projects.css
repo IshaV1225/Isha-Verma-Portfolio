@@ -199,7 +199,7 @@ nav ul li a:hover::after{
     color:#b54769;
     padding-bottom: 10px;
 }
-.my-role ul{
+#my-role ul{
     list-style: none;
     padding-top: 10px;
     padding-bottom: 20px;

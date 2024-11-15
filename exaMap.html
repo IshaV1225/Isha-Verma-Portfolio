@@ -13,6 +13,8 @@
     <nav>
         <img src="Images/logo.png" class="logo">
         <ul id="sidemenu">
+            <li><a href="#work-style">How does it Work</a></li>
+            <li><a href="#my-role">My Role</a></li>
             <li><a href="index.html">Home</a></li>
             <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
@@ -27,47 +29,160 @@
         <div class="row">
             <div class="about-col-1">
                 <img src="Images/examap.png " alt="">
+                <img src="Images/access_control.png" alt="">
+                <img src="Images/checking-in.png" alt="">
+                <img src="Images/Pos_tap.png" alt="">
+                <img src="Images/QR_code_map.png" alt="">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About ExaMap</h1>
-                <p class="about-text">A dedicated Computer Engineer who is driven by a passion of engineering solutions for challenging, relevant problems. 
-                    Strongly proficient—with years of experience—in Python, Java, C, and the web development suite (JavaScript, React.js, HTML, CSS), 
-                    I excel in writing elegant code and using a varied set of tools to tackle complex issues, as shown in my experience and projects.
-                    My strong problem-solving skills, meticulous attention to detail and a firm desire to learn and adapt quickly drive my commitment for excellence in the field.
-                    I'm pursuing software development and cloud infrastructure roles where I can apply my diverse technical skills and work with innovative teams towards their goals and products.</p>
+                <h2 class="timeline">Jan 2023 - April 2023</h2>
+                
+                <p class="about-text"> 
+                    The current exammination procedures for authenticating, verifying, and tracking students and their identities, such as
+                    attendance, check-in, check-out processes, and collection of their exam-solution booklets, is a non-digital process done using physical paper assets. 
+                    These attributes are not mapped on a per-student identity level. It is a repetitive process to fill in student data manually on 
+                    paper in examination booklets and check-in sheets. <br>
+                    ExaMap is a digital exam-audit platform that offers an RFID-based check-in and attendance solution along with QR-code-based unique IDs
+                    for examination solution booklets to digitize and increase the efficiency and integrity of these processes. 
+                    This can significantly benefit academic and educational institutions and organizations by allowing them to secure information as well
+                    as streamline their administrative processes which are generating and processing data associated with their examinations</p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('purpose')">Purpose</p>
+                        <p class="tab-links active-link" onclick="opentab('goals')">Goals</p>
                         <p class="tab-links" onclick="opentab('features')">Features</p>
-                        <p class="tab-links" onclick="opentab('hardware')">Hardware</p>
-                        <p class="tab-links" onclick="opentab('software')">Software Suite</p>
+                        <p class="tab-links" onclick="opentab('hardware')">Hardware Design</p>
+                        <p class="tab-links" onclick="opentab('software')">Software Design</p>
                     </div>
-                    <div class="tab-contents active-tab" id="purpose">
+                    <div class="tab-contents active-tab" id="goals">
                         <ul>
-                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                            <li><span>Web Development</span><br>Designing Web interfaces</li>
-                            <li><span>App Development</span><br>Building Android Apps</li>
-                            <li><span>Embeded Software Development</span><br>Building micro-controller software</li>
+                            <li><span>Improve</span> exam integrity by creating a secure and auditable exam environment.</li>
+                            <li><span>Automate</span> and digitize the exam attendance and monitoring process.</li>
+                            <li><span>Provide</span> support to examiners and proctors to streamline exam administration.</li>  
+                            <li><span>Autonomously</span> navigating the environment to deliver services where needed and adapting to various exam room layouts and conditions.</li>   
+                            <li><span>Scale to support</span> examinations with hundreds of students across multiple rooms, providing a consistent and reliable service regardless of exam size.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="features">
                         <ul>
-                            <li><span>Aug 2023 - Present</span><br>Designing Web/App interfaces</li>
-                            <li><span>Jan 2022 - Dec 2022</span><br>Designing Web/App interfaces</li>
+                            <li><span>Digital Organization of Exam Attendance</span><br>The system will create an electronic database to track 
+                                each student's attendance status during an exam session. This data is presented on a clear, user-friendly dashboard 
+                                for examiners and administrators to monitor in real-time.</li>
+                            <li><span>Tap-based Check-in Check-out Process</span><br>Students can quickly check in and out of the exam by 
+                                tapping their university RFID identification cards on the system's NFC readers, instantly updating their 
+                                attendance status.</li>
+                            <li><span>Information Security of Exam Materials</span><br>All exam-related data, including attendance, logs, 
+                                and booklet IDs, is securely stored in the cloud using Google Firebase. This digital backup prevents the 
+                                risks of lost or misrepresented information associated with paper records, as all interactions are 
+                                digitally tracked and saved.</li>
+                            <li><span>Reduced Procedural Time</span><br>The system minimizes the time and effort required for manual tasks,
+                                such as recording attendance and managing exam booklets. Examiners and teaching assistants benefit from 
+                                faster and more efficient record-keeping, reducing administrative workload.</li>
+                            <li><span>Unique-ID Mapping of Solution Booklets:</span><br>The system assigns unique QR codes to each exam booklet. 
+                                During check-in, it scans the booklet's QR code and links it to the student's exam record, ensuring accurate tracking
+                                of exam materials.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="hardware">
                         <ul>
-                            <li><span>Portfolio Website</span><br>Designed Web/App interfaces</li>
-                            <li><span>ExaMobil: Capstone Project</span><br>Built an exam attendance autonomous rover facilitating exam-related tasks</li>
-                            <li><span>Robotic Snow Blower</span><br>Built an autonomous rover to clear snow from driveway</li>
-                            <li><span>ExaMap: Digital Attendance System</span><br>Digital exam attendance and booklet assignment platform</li>
+                            <li><span>RFID/NFC Reader</span><br>
+                                <ul>
+                                    <li>• Used for tapping ID cards to record attendance.</li>
+                                    <li>• Used for tapping ID cards and being granted access exam room</li>
+                                </ul>
+                            </li>
+                            <li><span>3 Raspberry Pis</span><br>
+                                <ul>
+                                    <li>• Acts as the main control unit in each subsystem, running hardware, handling point of sale UI and data collection, and hosting the website.</li>
+                                </ul>
+                            </li>
+                            <li><span>QR Code Scanner (PiCam)</span><br>
+                                <ul>
+                                    <li>• Scans QR codes on solution booklets to link them with student records</li>
+                                </ul>
+                            </li>
+                            <li><span>Display & Feedback Components</span><br>
+                                <ul>
+                                    <li>• LEDs and LCD Screen: Provide visual feedback for successful attendance or error notifications.</li>
+                                    <li>• Buzzer: Gives auditory feedback for user interactions (used in certain subsystems).</li>
+                            </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="software">
                         <ul>
-                            <li><span>2019</span><br>BEng. in Computer Systems<br>From Carleton University</li>
+                            <li><span>Attendance Tracking</span><br>
+                                <ul>
+                                    <li>• Manages student check-in and check-out using RFID cards, recording attendance data in real-time.</li>
+                                </ul>
+                            </li>
+                            <li><span>Solution Booklet Mapping </span><br>
+                                <ul>
+                                    <li>• Links each student's solution booklet with their attendance record by scanning a unique QR code.</li>
+                                </ul>
+                            </li>
+                            <li><span>Administrative Dashboard</span><br>
+                                <ul>
+                                    <li>• Provides a User Interface to control Pi Camera and NFC sensor to allow invigilatiors take attendance of students one by one</li>
+                                    <li>• Provides a web-based dashboard for administrators to view attendance and exam records, including real-time updates.</li>
+                                </ul>
+                            </li>
+                            <li><span>Cloud Storage with Google Firebase</span><br>
+                                <ul>
+                                    <li>• Stores all exam data securely, allowing administrators to access and review data as needed.</li>
+                                </ul>
+                            </li>
+                            <li><span>Communication Protocols</span><br>
+                                <ul>
+                                    <li>• Uses Wi-Fi and internet protocols for data transfer between subsystems and the Firebase database.</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div> 
+                </p>
+<!----------------------------------------------------How it Works--------------------------------------------------------->
+                <div id="work-style">
+                    <h3 class="sub-title">How it works</h3>
+                    <p class="about-text">
+                        ExaMap is a digital exam-audit platform designed to streamline attendance and booklet tracking during examinations.
+                        Using RFID-based check-ins and QR code mapping, ExaMap provides a secure, efficient solution for tracking each 
+                        student's attendance and linking solution booklets to their records. The platform operates across three subsystems:
+                        Access Control, PoS (Point of Sale), and an Administrative Dashboard. Together, these subsystems ensure a structured,
+                        auditable, and user-friendly examination process, reducing manual effort and enhancing data accuracy and security. 
+                        Here's how each sub-system functions:
+                        
+                        <h4>1. Access Control Sub-system</h4> 
+                        <p>This sub-system is the entry point of the ExaMap system, dedicated to managing and securing student entry and exit during exams.
+                           Using RFID technology, this subsystem allows students to tap their ID cards on an NFC reader to verify their 
+                           attendance and register their entry and exit times. Visual and auditory feedback is provided through LEDs and 
+                           buzzers, ensuring students know their check-in status immediately. This data is transmitted to the cloud, 
+                           where it is stored and made accessible for tracking and auditing.
+                        </p> 
+                        <br>
+                        <h4>2. PoS (Point of Sale) Sub-system</h4>
+                        <p> This sub-system serves as a handheld tool for exam proctors, facilitating quick and accurate attendance 
+                            recording during the exam. Through a tap-based RFID check-in, the PoS Subsystem verifies each student's
+                             attendance and associates their unique ID with the exam session. Additionally, it uses an onboard camera 
+                             to scan QR codes on solution booklets, mapping each booklet to the corresponding student’s record. This 
+                             functionality reduces manual effort and ensures precise tracking of exam materials.
+                        </p>
+                        <br>
+                        <h4>3. Administrative Sub-system</h4> 
+                        <p> This sub-system provides a web-based dashboard for exam administrators to manage and oversee all examination
+                            data in real-time. It aggregates information from the Access Control and PoS subsystems, giving a 
+                            comprehensive view of student attendance, exam status, and booklet tracking. Hosted on the cloud, the 
+                            dashboard allows administrators to monitor each exam session, review attendance records, and generate reports
+                            securely. This subsystem offers a high level of visibility and control, helping administrators streamline 
+                            examination processes and maintain data integrity.
+                        </p>
+                    </p>
+                </div>
+<!----------------------------------------------------My Role------------------------------------------------------->
+                <div id="my-role">
+                    <h3 class="sub-title">My Role</h3>
+                    <h3 class="role">Sensor Systems Engineer and Web Developer</h3>
+                    <ul>
+                        <li>This is a test</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
