@@ -13,6 +13,8 @@
     <nav>
         <img src="Images/logo.png" class="logo">
         <ul id="sidemenu">
+            <li><a href="#work-style">How does it Work</a></li>
+            <li><a href="#my-role">My Role</a></li>
             <li><a href="index.html">Home</a></li>
             <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
@@ -26,12 +28,20 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="Images/capstone.jpg " alt="" class="exaMobil-img">
+                <video autoplay controls>
+                    <source src="Images/Project-Video.mp4" type="video/mp4">
+                </video>
+                <img src="Images/capstone.jpg " alt="">
+                <img src="Images/exaMobil_setup.jpg" alt="">
+                <img src="Images/posterFair_setUP.jpg" alt="">
+                <video autoplay controls>
+                    <source src="Images/posterFair_vid.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About ExaMobil</h1>
                 <h2 class="timeline">Sept 2023 - April 2024</h2>
-                <h3 class="role">Sensor Systems Engineer and Web Developer</h3>
+                
                 <p class="about-text"> 
                     ExaMobil is an autonomous robotic rover platform designed to enhance examination processes by combining the digital 
                     audit capabilities of ExaMap with cutting-edge robotics. ExaMap, a digital exam-audit platform, uses RFID tags and NFC
@@ -44,44 +54,159 @@
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('goals')">Goals</p>
                         <p class="tab-links" onclick="opentab('features')">Features</p>
-                        <p class="tab-links" onclick="opentab('hardware')">Hardware</p>
-                        <p class="tab-links" onclick="opentab('software')">Software Suite</p>
+                        <p class="tab-links" onclick="opentab('hardware')">Hardware Design</p>
+                        <p class="tab-links" onclick="opentab('software')">Software Design</p>
                     </div>
                     <div class="tab-contents active-tab" id="goals">
                         <ul>
-                            <li>• <span>Improve</span> exam integrity by creating a secure and auditable exam environment.</li>
-                            <li>• <span>Automate</span> and digitize the exam attendance and monitoring process.</li>
-                            <li>• <span>Provide</span> support to examiners and proctors to streamline exam administration.</li>  
-                            <li>• <span>Autonomously</span> navigating the environment to deliver services where needed and adapting to various exam room layouts and conditions.</li>   
-                            <li>• <span>Scale to support</span> examinations with hundreds of students across multiple rooms, providing a consistent and reliable service regardless of exam size.</li>
+                            <li><span>Improve</span> exam integrity by creating a secure and auditable exam environment.</li>
+                            <li><span>Automate</span> and digitize the exam attendance and monitoring process.</li>
+                            <li><span>Provide</span> support to examiners and proctors to streamline exam administration.</li>  
+                            <li><span>Autonomously</span> navigating the environment to deliver services where needed and adapting to various exam room layouts and conditions.</li>   
+                            <li><span>Scale to support</span> examinations with hundreds of students across multiple rooms, providing a consistent and reliable service regardless of exam size.</li>
                       
                         </ul>
                     </div>
                     <div class="tab-contents" id="features">
                         <ul>
-                            <li><span>Dynamic Environment Driving</span><br>Designing Web/App interfaces</li>
-                            <li><span>Waypoint-based Vehicle Control and Response</span><br>Designing Web interfaces</li>
-                            <li><span>Gesture Detection & Recognition</span><br>Building Android Apps</li>
-                            <li><span>Mode-controlled Service Behaviour</span><br>Building micro-controller software</li>
-                            <li><span>Digital Organization of Exam Attendance</span><br>Building micro-controller software</li>
-                            <li><span>Tap-based Check-in Check-out Process</span><br>Building micro-controller software</li>
-                            <li><span>Information Security of Exam Materials</span><br>Building micro-controller software</li>
-                            <li><span>Reduced Procedural Time</span><br>Building micro-controller software</li>
+                            <li><span>Dynamic Environment Driving</span><br>The system is designed to operate in unfamiliar examination 
+                                venues. By detecting and following a physical path on the floor, it can control its movements and continuously trace the path as it operates.
+                                This enables the rover to navigate any environment that includes the required path, without needing prior knowledge of the location.</li>
+                            <li><span>Waypoint-based Vehicle Control and Response</span><br>The system can detect specific waypoints and key points 
+                                along a fixed loop path while in motion. Using a combination of analog and optical sensors, it determines the 
+                                rover's position and status, enabling it to deliver relevant services to examiners and students based on its 
+                                current mode.</li>
+                            <li><span>Gesture Detection & Recognition</span><br>Equipped with analog and optical sensors, the system can detect 
+                                and recognize hand gestures within its range and field of view. This gesture recognition allows users to request
+                                services from the rover or to interact with its autonomous functions through simple hand signals.</li>
+                            <li><span>Mode-controlled Service Behaviour</span><br>The system can operate in various modes, each defining 
+                                specific behaviors and services provided by the rover. These modes can be set up during startup, through 
+                                remote access, or controlled by buttons and gestures, allowing flexible operation to meet different needs.</li>
+                            <li><span>Digital Organization of Exam Attendance</span><br>The system will create an electronic database to track 
+                                each student's attendance status during an exam session. This data is presented on a clear, user-friendly dashboard 
+                                for examiners and administrators to monitor in real-time.</li>
+                            <li><span>Tap-based Check-in Check-out Process</span><br>Students can quickly check in and out of the exam by 
+                                tapping their university RFID identification cards on the system's NFC readers, instantly updating their 
+                                attendance status.</li>
+                            <li><span>Information Security of Exam Materials</span><br>All exam-related data, including attendance, logs, 
+                                and booklet IDs, is securely stored in the cloud using Google Firebase. This digital backup prevents the 
+                                risks of lost or misrepresented information associated with paper records, as all interactions are 
+                                digitally tracked and saved.</li>
+                            <li><span>Reduced Procedural Time</span><br>The system minimizes the time and effort required for manual tasks,
+                                such as recording attendance and managing exam booklets. Examiners and teaching assistants benefit from 
+                                faster and more efficient record-keeping, reducing administrative workload.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="hardware">
                         <ul>
-                            <li><span>Portfolio Website</span><br>Designed Web/App interfaces</li>
-                            <li><span>ExaMobil: Capstone Project</span><br>Built an exam attendance autonomous rover facilitating exam-related tasks</li>
-                            <li><span>Robotic Snow Blower</span><br>Built an autonomous rover to clear snow from driveway</li>
-                            <li><span>ExaMap: Digital Attendance System</span><br>Digital exam attendance and booklet assignment platform</li>
+                            <li><span>Sensors and Perception</span><br>
+                                <ul>
+                                    <li>• Line Follower Sensors: Detect and follow paths on the ground.</li>
+                                    <li>• Color Sensor: Recognizes colored markers for navigation.</li>
+                                    <li>• Infrared (IR) and Ultrasonic Sensors: Help avoid obstacles.</li>
+                                    <li>• Camera: Captures visuals for advanced gesture recognition.</li>
+                                </ul>
+                            </li>
+                            <li><span>User Interface</span><br>
+                                <ul>
+                                    <li>• LED Indicators: Show the rover's status.</li>
+                                    <li>• LCD Screen: Provides feedback and information to users.</li>
+                                    <li>• Buttons and Audio Cues: Allow users to interact with the rover</li>
+                                </ul>
+                            </li>
+                            <li><span>Control and Processing</span><br>
+                                <ul>
+                                    <li>• Microcontroller: Acts as the rover's brain, processing sensor data and executing decisions.</li>
+                                    <li>• Motor Control Algorithms: Software that guides motor actions based on sensor input.</li>
+                                    <li>• Buttons and Audio Cues: Allow users to interact with the rover</li>
+                                </ul>
+                            </li>
+                            <li><span>Mobility and Motion Control</span><br>
+                                <ul>
+                                    <li>• Chassis: The main structure of the rover.</li>
+                                    <li>• Wheels and Motors: Enable movement and directional control.</li>
+                                    <li>• Motor Drivers: Control the speed and power of the motors.</li>
+                                    <li>• Encoders: Provide feedback for precise movement control</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="software">
                         <ul>
-                            <li><span>2019</span><br>BEng. in Computer Systems From Carleton University</li>
+                            <li><span>Path Tracking and Control</span><br>
+                                <ul>
+                                    <li>• Line-Following Algorithm: Guides the rover along a predefined path using line follower and color sensors.</li>
+                                </ul>
+                            </li>
+                            <li><span>Digital Exam Attendance </span><br>
+                                <ul>
+                                    <li>• RFID and NFC Integration: Allows students to check in and out by tapping their ID cards</li>
+                                    <li>• Solution Booklet Mapping: Uses QR codes to link each student's booklet with their attendance record.</li>
+                                </ul>
+                            </li>
+                            <li><span>Gesture Recognition Sub-System</span><br>
+                                <ul>
+                                    <li>• Hand Gesture Detection: Uses a camera to detect specific gestures for assistance requests.</li>
+                                </ul>
+                            </li>
+                            <li><span>Administrative Dashboard</span><br>
+                                <ul>
+                                    <li>• User Interface (UI): Displays real-time attendance and exam data for administrators.</li>
+                                    <li>• Data Visualization: Shows a virtual layout of the exam room with status indicators.</li>
+                                </ul>
+                            </li>
+                            <li><span>Cloud-Based Back-End</span><br>
+                                <ul>
+                                    <li>• Google Firebase: Stores exam data securely in the cloud, allowing easy access and backup.</li>
+                                    <li>• Real-Time Updates: Synchronizes data instantly, ensuring administrators have up-to-date information.</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div> 
+                </p>
+<!----------------------------------------------------How it Works--------------------------------------------------------->
+                <div id="work-style">
+                    <h3 class="sub-title">How it works</h3>
+                    <p class="about-text">
+                        ExaMobil operates in a series of modes, each designed to support different tasks during an examination session.
+                        These modes run sequentially, ensuring a smooth and structured process for assisting students and examiners
+                        throughout the exam. Here's how each mode functions:
+                        <h4>1. Learn & Map</h4> 
+                        <p>At the beginning of the session, ExaMobil enters its startup mode, "Learn & Map." 
+                            In this mode, the rover follows a predefined path around the examination venue, identifying 
+                            key points and building a virtual map of the environment, including seating arrangements. 
+                            This map serves as the foundation for all subsequent modes, creating necessary data and visual
+                            references to support the session.
+                        </p> 
+                        <br>
+                        <h4>2. Attendance & Booklet Capture</h4>
+                        <p> Once mapping is complete, ExaMobil shifts to "Attendance & Booklet Capture."
+                            In this mode, it follows its mapped path to each student's seat, where it activates the ExaMap system
+                            to allow students to record their attendance. This mode ensures that all attendance is logged accurately
+                            and linked to each student's exam booklet for streamlined tracking.
+                        </p>
+                        <br>
+                        <h4>3. Student Support</h4> 
+                        <p>For the remainder of the exam, ExaMobil runs in "Student Support" mode. It patrols the venue,
+                            scanning for gestures from students requesting assistance. When a student signals for help,
+                            the rover registers the request and alerts exam proctors via the administrative interface.
+                            This allows proctors to promptly assist the student, ensuring a smooth exam experience and
+                            reducing disruptions. 
+                        </p>
+                        
+                        <p> ExaMobil's multi-mode operation enables it to adapt to different tasks,
+                            from mapping the environment to supporting students, making it an effective,
+                            versatile solution for exam venues. </p>
+                    </p>
+                </div>
+<!----------------------------------------------------My Role------------------------------------------------------->
+                <div class="my-role">
+                    <h3 class="sub-title">My Role</h3>
+                    <h3 class="role">Sensor Systems Engineer and Web Developer</h3>
+                    <ul>
+                        <li>This is a test</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

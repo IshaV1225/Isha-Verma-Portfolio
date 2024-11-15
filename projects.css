@@ -71,11 +71,18 @@ nav ul li a:hover::after{
     padding: 30px 5px;
     color: #ababab
 }
-.exaMobil-img{
+.about-col-1 img{
     width: 100%;
     height: auto;
     border-radius: 10px;
+    padding-top: 5px;
     display: block;
+}
+.about-col-1 video{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 10px;
 }
 .row{
     display: flex;
@@ -87,6 +94,9 @@ nav ul li a:hover::after{
 }
 .about-col-2{
     flex-basis: 60%;
+}
+.about-col-2 h2{
+    color:#b54769;
 }
 .sub-title{
     padding-bottom: 15px;
@@ -100,19 +110,16 @@ nav ul li a:hover::after{
     font-weight: 400;
     color: #ababab;
 }
-.role{
-    padding-bottom: 15px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #b54769;
-}
+
 .about-text{
     padding-top: 10px;
+    padding-bottom: 20px;
     line-height: 1.5;
     font-size: 15px;
     font-weight: none;
     font-family: 'Poppins', sans-serif;
 }
+
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
@@ -134,47 +141,11 @@ nav ul li a:hover::after{
     left: 0;
     bottom: -8px;
     transition: 0.5s;
-}
-.tab-links.active-link::after{
-    width: 50%;
-}
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-}
-.tab-contents ul li span{
-    color: #b54769;
-    font-size: 14px;
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-    line-height: 1.5;
-}
-.tab-titles{
-    display: flex;
-    margin: 20px 0 40px;
-}
-
-.tab-links{
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
-}
-
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
 }
 .tab-links.active-link::after{
     width: 50%;
@@ -186,27 +157,69 @@ nav ul li a:hover::after{
 }
 .tab-contents ul li span{
     color: #b54769;
-    font-size: 16px;
+    font-size: 17px;
 }
 .tab-contents{
     display: none;
+    padding-bottom: 20px;
 }
 .tab-contents.active-tab{
     display: block;
     line-height: 1.5;
 }
 
-/*-----------------------About ExaMap---------------------------*/
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+/*-----------------------How it works---------------------------*/
+#work-style h4{
+    color: #b54769;
+    font-size: large;
+    font-weight: 200;
+}
+#work-style p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*-----------------------My Role---------------------------*/
+.role{
+    color:#b54769;
+    padding-bottom: 10px;
+}
+.my-role ul{
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*-----------------------About ExaMap---------------------------
 .exaMap-img{
     width: 100%;
     height: auto;
     border-radius: 10px;
     display: block;
 }
-/*-------------------About Snow Plowing Rover-------------------*/
+/*-------------------About Snow Plowing Rover-------------------
 .snowPlow-img{
     width: 100%;
     height: auto;
     border-radius: 10px;
     display: block;
-}
+}          */
