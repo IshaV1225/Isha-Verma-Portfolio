@@ -224,17 +224,11 @@ nav ul li a:hover::after{
     color: #b54769;
     font-size: 17px;
 }
-/*-----------------------About ExaMap---------------------------
-.exaMap-img{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
+.fa-bars {
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+    display: none; /* Visible only on small screens */
 }
-/*-------------------About Snow Plowing Rover-------------------
-.snowPlow-img{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-}          */
+
+/*---------------------------------CSS for small screens----------------------------*/
