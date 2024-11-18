@@ -33,7 +33,9 @@ nav ul {
 }
 
 nav ul li{
-    margin: 0 20px;
+    margin: 0px 20px;
+    display: inline-block;
+    list-style: none;
 }
 nav ul li a{
     color: #fff;
@@ -259,7 +261,7 @@ nav .fa-solid{
     }
     nav ul li{
         display: block;
-        margin: 25px;
+        margin-top: 25px;
     }
     nav ul .fa-solid{
         position: absolute;
@@ -278,7 +280,7 @@ nav .fa-solid{
         padding-left: 30px;
     }
     .about-text{
-        font-size: 13px;
+        font-size: 15px;
         overflow: hidden;
     }
     .tab-links{

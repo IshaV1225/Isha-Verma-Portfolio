@@ -12,14 +12,16 @@
  <!----------------------------------------------------Navigation Bar----------------------------------------->
  <div id="header">
     <div class="container">
-    <nav>
-        <img src="Images/logo.png" class="logo">
-        <ul id="sidemenu">
-            <li><a href="index.html">Home</a></li>
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-        </ul>
-        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-    </nav>
+        <nav>
+            <img src="Images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#work-style">How it works</a></li>
+                <li><a href="#my-role">My Role</a></li>
+                <li><a href="index.html">Home</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
     </div>  
 </div>
 
@@ -28,48 +30,160 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="Images/SnowPlow.jpg " alt="">
+                <figure>
+                    <img src="Images/SnowPlow.jpg " alt="">
+                    <figcaption>Snow Plowing Rover</figcaption>
+                </figure>
+                <figure>
+                    <video autoplay controls>
+                        <source src="Images/Snow-Plow-Vid.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>Snow Plow Project Demo Video</figcaption>
+                </figure>
+
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Snow Plowing Rover</h1>
-                <p class="about-text">A dedicated Computer Engineer who is driven by a passion of engineering solutions for challenging, relevant problems. 
-                    Strongly proficient—with years of experience—in Python, Java, C, and the web development suite (JavaScript, React.js, HTML, CSS), 
-                    I excel in writing elegant code and using a varied set of tools to tackle complex issues, as shown in my experience and projects.
-                    My strong problem-solving skills, meticulous attention to detail and a firm desire to learn and adapt quickly drive my commitment for excellence in the field.
-                    I'm pursuing software development and cloud infrastructure roles where I can apply my diverse technical skills and work with innovative teams towards their goals and products.</p>
+                <h2 class="timeline">Sept 2023 - Dec 2023</h2>
+                
+                <p class="about-text"> 
+                    This autonomous robotic snowplow is designed to efficiently clear snow in predefined areas, utilizing advanced sensor 
+                    technology and intelligent software systems. Built as part of an innovative engineering project, this rover combines a 
+                    plow mechanism with an array of sensors, including ultrasonic and line-following sensors, to detect obstacles, 
+                    maintain boundaries, and clear simulated snow. <br>
+                    The system operates independently, requiring minimal human intervention
+                    while ensuring precise snow removal and obstacle avoidance. At its core, the rover uses an Arduino Due microcontroller
+                    to manage inputs from sensors and execute real-time actions. The integrated system allows the robot to navigate 
+                    complex environments, adhere to speed and boundary constraints, and avoid collisions with obstacles. Designed for 
+                    reliability and performance, this is a scalable solution for automating snow removal tasks in varied conditions. </p>
+
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('purpose')">Purpose</p>
+                        <p class="tab-links active-link" onclick="opentab('goals')">Goals</p>
                         <p class="tab-links" onclick="opentab('features')">Features</p>
-                        <p class="tab-links" onclick="opentab('hardware')">Hardware</p>
-                        <p class="tab-links" onclick="opentab('software')">Software Suite</p>
+                        <p class="tab-links" onclick="opentab('hardware')">Hardware Design</p>
+                        <p class="tab-links" onclick="opentab('software')">Software Design</p>
                     </div>
-                    <div class="tab-contents active-tab" id="purpose">
+                    <div class="tab-contents active-tab" id="goals">
                         <ul>
-                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                            <li><span>Web Development</span><br>Designing Web interfaces</li>
-                            <li><span>App Development</span><br>Building Android Apps</li>
-                            <li><span>Embeded Software Development</span><br>Building micro-controller software</li>
+                            <li><span>Enhance Efficiency: </span> Simplify the snow-clearing process by using autonomous technology.</li>
+                            <li><span>Ensure Precision:</span> Use advanced sensors to accurately detect boundaries and obstacles, maintaining precision in snow clearing.</li>
+                            <li><span>Promote Safety:</span> Minimize collisions and system failures through robust obstacle detection and avoidance mechanisms.</li>  
+                            <li><span>Adapt to Environment:</span> Leverage dynamic navigation capabilities to operate in varied layouts and conditions.</li>   
+                            <li><span>Optimize Performance: </span> Maximize snow clearance within a limited time while adhering to speed and zone constraints.</li>
+                            <li><span>Scalable Solution:</span> Design a system that can handle various snow-clearing needs, big or small.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="features">
                         <ul>
-                            <li><span>Aug 2023 - Present</span><br>Designing Web/App interfaces</li>
-                            <li><span>Jan 2022 - Dec 2022</span><br>Designing Web/App interfaces</li>
+                            <li><span>Autonomous Operation: </span><br>Fully automated system requiring minimal human intervention.</li>
+                            <li><span>Obstacle Detection:</span><br> Equipped with ultrasonic sensors to identify and avoid obstacles.</li>
+                            <li><span>Precision Plowing:</span><br> Effectively clears snow using a custom plow design.</li>
+                            <li><span>Speed Control:</span><br> Maintains a safe and consistent speed under 30 cm/s.</li>
+                            <li><span>Dynamic Navigation:</span><br> Adapts to different layouts and adjusts movement based on sensor input.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="hardware">
                         <ul>
-                            <li><span>Portfolio Website</span><br>Designed Web/App interfaces</li>
-                            <li><span>ExaMobil: Capstone Project</span><br>Built an exam attendance autonomous rover facilitating exam-related tasks</li>
-                            <li><span>Robotic Snow Blower</span><br>Built an autonomous rover to clear snow from driveway</li>
-                            <li><span>ExaMap: Digital Attendance System</span><br>Digital exam attendance and booklet assignment platform</li>
+                            <li><span>Arduino Due Microcontroller</span><br>
+                                <ul>
+                                    <li>• Central control unit managing sensor input and motor control.</li>
+                                    <li>• Coordinates all subsystems for autonomous operation.</li>
+                                </ul>
+                            </li>
+                            <li><span>Ultrasonic Sensors</span><br>
+                                <ul>
+                                    <li>• Detect obstacles in the robot's path to avoid collisions.</li>
+                                    <li>• Enable dynamic navigation around objects.</li>
+                                </ul>
+                            </li>
+                            <li><span>Line-Following Sensors</span><br>
+                                <ul>
+                                    <li>• Detect boundaries to ensure the robot stays within the designated area.</li>
+                                    <li>• Prevents the robot from leaving the snow-clearing zone.</li>
+                                </ul>
+                            </li>
+                            <li><span>Infrared Sensors</span><br>
+                                <ul>
+                                    <li>• Measure distances for obstacle detection and navigation support.</li>
+                            <li><span>DC Motors with Encoders</span><br>
+                                <ul>
+                                    <li>• Provide movement and control the speed of the robot.</li>
+                                    <li>• Ensure precision through real-time feedback from encoders.</li>
+                            </li>
+                            <li><span>IMU (Inertial Measurement Unit)</span><br>
+                                <ul>
+                                    <li>• Tracks orientation and movement for accurate navigation.</li>
+                                </ul>
+                            </li>        
                         </ul>
                     </div>
+
                     <div class="tab-contents" id="software">
                         <ul>
-                            <li><span>2019</span><br>BEng. in Computer Systems<br>From Carleton University</li>
+                            <li><span>Integrated System Control</span><br>
+                                <ul>
+                                    <li>• Centralized software coordinates all subsystems for seamless operation.</li>
+                                    <li>• Handles inputs from sensors and translates them into motor actions.</li>
+                                </ul>
+                            </li>
+                            <li><span>Obstacle Avoidance Algorithm</span><br>
+                                <ul>
+                                    <li>• Uses ultrasonic sensor data to detect and avoid obstacles.</li>
+                                    <li>• Adjusts navigation dynamically to maintain safe operation.</li>
+                                </ul>
+                            </li>
+                            <li><span>Speed Control Algorithm</span><br>
+                                <ul>
+                                    <li>• Plans and executes the most efficient route for clearing snow.</li>
+                                    <li>• Reduces redundancy and maximizes coverage.</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div> 
+                </p>
+<!----------------------------------------------------How it Works--------------------------------------------------------->
+                <div id="work-style">
+                    <h3 class="sub-title">How it works</h3>
+                    <p class="about-text">
+                        AutoSnow is an autonomous snowplow robot designed to efficiently clear snow from designated areas with minimal 
+                        human intervention. Powered by an Arduino Due microcontroller, the robot integrates advanced sensors, including 
+                        ultrasonic and line-following sensors, to navigate its environment. The ultrasonic sensors detect obstacles, 
+                        triggering the robot to adjust its path dynamically to avoid collisions, while the line-following sensors ensure 
+                        it stays within the defined boundaries of the snow-clearing zone. A custom-designed plow mechanism efficiently 
+                        moves snow out of the target area, guided by precise movement algorithms and motor control. The robot operates at
+                        safe speeds, continuously monitors its surroundings, and logs performance data, ensuring a reliable, efficient,
+                        and fully autonomous snow-clearing experience.
+                    </p>
+                </div>
+<!----------------------------------------------------My Role------------------------------------------------------->
+                <div id="my-role">
+                    <h3 class="sub-title">My Role</h3>
+                    <h3 class="role">Sensor Systems Engineer</h3>
+                    <p class="about-text">
+                        Co-developed a snow plowing rover to clear off snow in a designated area and collaborated with team members to manage 
+                        milestones, troubleshoot challenges, and ensure timely project delivery.
+                        
+                        <ul>
+                            <li>• <span>Software Development:</span> Designed and implemented critical algorithms for autonomous navigation, 
+                                including obstacle avoidance, speed control, and boundary detection.
+                            </li>
+                            <br>
+                            <li>• <span>Sensor Integration: </span> Connected and configured sensors, such as line-following and ultrasonic 
+                                sensors, to ensure accurate input and real-time responsiveness.
+                            </li>
+                            <br>
+                            <li>• <span>System Testing and Debugging:</span>Conducted unit and integration testing to validate subsystem 
+                                functionality, ensuring smooth interaction across all components.
+                            </li>
+                            <br>
+                            <li>• <span>Documentation and Reporting: </span>Authored sections of the final report, including system behavior, 
+                                scheduling, and testing results, ensuring clarity and professionalism.
+                            </li>
+                            <br>                        
+                        </ul>
+
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -94,7 +208,6 @@
     }
 
 </script>
-
 <script>
     // script for open and close menu of About me section for smaller screens
     var sidemenu = document.getElementById("sidemenu");
