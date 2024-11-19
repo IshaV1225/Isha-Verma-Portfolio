@@ -30,7 +30,6 @@
     </div>  
 </div>
 <!------------------------------About ME--------------------------------->
-
 <div id="about">
     <div class="container">
         <div class="row">
@@ -107,17 +106,33 @@
     <div class="container">
         <h1 class="sub-title">Experience</h1>
         <div class="experience-list">
-            <div>
+            <div class="experience-item" onclick="toggleExperience(this)">
                 <i class="fa-solid fa-code"></i>
                 <h2>Paraverse Studio</h2>
-                <p>Software Developer at Paraverse Studio</p>
-                <a href="#">Learn more</a>
+                <h3>Software Developer </h3>
+                <ul class="additional-text" style="display: none;">
+                    <li>Developed front-end features for the product website 
+                        (www.paraversestudio.com/) using JavaScript, React, HTML/CSS, 
+                        and C# for backend</li>
+                    <li>Led QA through testing, debugging and diagnosing issues 
+                        to ensure successful game releases on Steam, Google Play, and
+                        WebGL through testing, debugging, and user feedback</li>
+                </ul>
             </div>
-            <div>
-                <i class="fa-solid fa-laptop"></i>
-                <h2>Mi Presence Inc</h2>
-                <p>Software Developer at Mi Presence Inc.</p>
-                <a href="#">Learn more</a>
+
+            <div class="experience-item" onclick="toggleExperience(this)">
+                <i class="fa-solid fa-code"></i>
+                <h2>Mi Presence Inc.</h2>
+                <h3>Software Developer</h3>
+                <ul class="additional-text" style="display: none;">
+                    <li>Developed and launched 'Taximeter,' an Android app used by over
+                        5,000 taxi drivers to receive real-time ride data, 
+                        reducing operational delays by 30%.</li>
+                    <li>Created a responsive web application platform using HTML, CSS,
+                        and JavaScript for communication between employees</li>
+                    <li>Co-developed an IoT Accelerometer in C language to receive 
+                        Interrupts from sensors to update services of vehicle conditions</li>
+                </ul>
             </div>
             
         </div>
@@ -183,7 +198,6 @@
     </div>
 </div>
 
-
 </body>
 
 <script>
@@ -220,6 +234,21 @@
 </script>
 
 <script>
+    function toggleExperience(element) {
+    const additionalText = element.querySelector('.additional-text');
+
+    // Toggle visibility
+    if (additionalText.style.display === 'none' || additionalText.style.display === '') {
+        additionalText.style.display = 'block'; // Show additional text
+    } else {       
+        additionalText.style.display = 'none'; // Hide additional text
+    }
+}
+
+</script>
+
+
+<script>
     // script for contact form
     const scriptURL = 'https://script.google.com/macros/s/AKfycbz8qT1et2ZWDHDvYog4c6d-RWJeUEtkub8qPnZvO1hPioVpFmX9sfYQQPj_HWEUkzw4/exec'
     const form = document.forms['submit-to-google-sheet']
@@ -237,7 +266,7 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
-  </script>
+</script>
 
 
 </html>
