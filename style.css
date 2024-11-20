@@ -307,6 +307,10 @@ nav ul li a:hover::after{
     text-decoration: underline;
     color: #fff;
 }
+.github{
+    text-decoration: underline;
+    color: #fff;
+}
 .btn.btn2{
     display: inline-block;
     background: #ff004f;
