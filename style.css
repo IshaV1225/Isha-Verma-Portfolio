@@ -73,7 +73,7 @@ nav ul li a:hover::after{
 /*--------------------about me---------------*/
 
 #about {
-    padding: 80px 0;
+    padding: 60px 0;
     color: #ababab
 }
 .about-img{
@@ -83,8 +83,9 @@ nav ul li a:hover::after{
 }
 .row{
     display: flex;
+    flex-wrap: nowrap; /* Prevents text from wrapping onto a new row */
     justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .about-col-1{
@@ -96,7 +97,7 @@ nav ul li a:hover::after{
 }
 
 .sub-title{
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 600;
     color: #fff;
 }
@@ -109,7 +110,7 @@ nav ul li a:hover::after{
 }
 .tab-titles{
     display: flex;
-    margin: 20px 0 40px;
+    margin: 20px 0 30px;
 }
 
 .tab-links{
@@ -344,6 +345,86 @@ form .btn2{
     font-weight: 300;
     margin-top: 20px;
 }
+
+/*------------------------------ Chatbot styling -----------------------------------*/
+
+/* Chat Toggle Button */
+#chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: #ff004f;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    overflow: visible;
+}
+
+.askMe-text {
+    visibility: hidden;
+    color: white;
+    font-size: 15px;  /* Smaller font size */
+    padding: 2px 8px; /* Reduced padding */
+    border-radius: 4px;
+    position: absolute;
+    bottom: 100%; /* Ensures the tooltip appears above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none; /* Prevents interaction with the tooltip */
+}
+
+#chat-toggle:hover {
+    background-color: #555;
+}
+#chat-toggle:hover .askMe-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Chatbox Styling */
+#chatbox {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    z-index: 1000;
+}
+
+/* Chatbox Header */
+#chat-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Show/Hide Class */
+.hidden {
+    display: none;
+}
+
+
 /*---------------------------------CSS for small screens----------------------------*/
 nav .fa-solid{
     display: none;
@@ -395,6 +476,11 @@ nav .fa-solid{
         margin-bottom: 30px;
         padding-left: 30px;
     }
+
+    .column {
+        grid-template-columns: 1fr; /* Switch to single column layout */
+    }
+    
     .about-text{
         font-size: 15px;
         overflow: hidden;
