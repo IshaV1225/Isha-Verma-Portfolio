@@ -232,14 +232,14 @@
 <!-- Chat Toggle Button -->
 <div id="chat-toggle">
     <i class="fa-solid fa-comments"></i>
-    <span class="askMe-text">Let's Chat!</span>
+    <span class="askMe-text">Ask me!</span>
 </div>
 
 <!-- Chatbox -->
 <div id="chatbox" class="hidden">
     <div id="chat-header">Ask me about Isha!</div>
     <div id="chat-messages"></div>
-    <input type="text" id="user-input" placeholder="Type a message...">
+    <input type="text" id="user-input" placeholder="Ask a question...">
     <button onclick="sendMessage()">Send</button>
 </div>
 
@@ -248,14 +248,19 @@
 
 <!------------------------------JavaScript---------------------------->
 <script>
+    // Script for the chatbox
+
     document.getElementById("chat-toggle").addEventListener("click", function() {
     const chatbox = document.getElementById("chatbox");
+    const askMeText = document.querySelector("askMe-text");
     if (chatbox.style.display === "none" || chatbox.classList.contains("hidden")) {
         chatbox.style.display = "flex";
         chatbox.classList.remove("hidden");
+        askMeText.style.display = "none";
     } else {
         chatbox.style.display = "none";
         chatbox.classList.add("hidden");
+        askMeText.style.display = "block";
     }
 });
 
