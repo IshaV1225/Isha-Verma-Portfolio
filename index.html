@@ -130,7 +130,7 @@
     <div class="container">
         <h1 class="sub-title">Experience</h1>
         <div class="experience-list">
-            <div class="experience-item" onclick="toggleExperience(this)">
+            <div class="experience-item" id="paraversestudio" onclick="toggleExperience(this)">
                 <i class="fa-solid fa-code"></i>
                 <h2>Paraverse Studio</h2>
                 <h3>Software Developer </h3>
@@ -148,7 +148,7 @@
                 </ul>
             </div>
 
-            <div class="experience-item" onclick="toggleExperience(this)">
+            <div class="experience-item" id="miPresence" onclick="toggleExperience(this)">
                 <i class="fa-solid fa-code"></i>
                 <h2>Mi Presence Inc.</h2>
                 <h3>Software Developer</h3>
@@ -205,8 +205,12 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> vermaishaca@gmail.com</p>
-                <p><i class="fa-solid fa-square-phone"></i> +1 (647)542-0778</p>
+                <div class="email-container" onclick="copyEmail()" title="Click to copy">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span id="email-text">vermaishaca@gmail.com</span>
+                    <span class="copy-tooltip">📋 Copied!</span>
+                </div>
+                <p><i class="fa-solid fa-square-phone"></i>+1 (647) 542-0778</p>
                 <p><a href="https://www.linkedin.com/in/ishaverma1225/" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i>ishaverma1225</a></p>
                 <p><a href="https://github.com/IshaV1225" target="_blank" class="github"><i class="fa-brands fa-github"></i>IshaV1225</a></p>
                 <a href="Images/Isha-Verma-Resume.pdf" download class="btn btn2">Download Resume</a>
@@ -263,16 +267,47 @@
 </script>
 
 <script>
-    function toggleExperience(element) {
-    const additionalText = element.querySelector('.additional-text');
 
-    // Toggle visibility
-    if (additionalText.style.display === 'none' || additionalText.style.display === '') {
-        additionalText.style.display = 'block'; // Show additional text
-    } else {       
-        additionalText.style.display = 'none'; // Hide additional text
+    function toggleExperience(element) {
+        const bulletPoints = element.querySelectorAll('.additional-text li');
+        const additionalText = element.querySelector('.additional-text');
+        const allItems = document.querySelectorAll('.experience-item');
+
+        // Close all other experience boxes except the clicked one
+        allItems.forEach(item => {
+            if (item !== element) {
+                item.classList.remove('expanded');
+                const otherText = item.querySelector('.additional-text');
+                otherText.style.display = 'none'; // Hide text from other boxes
+                item.querySelectorAll('.additional-text li').forEach(li => {
+                    li.style.opacity = 0; // Reset opacity for other boxes
+                });
+            }
+        });
+
+        // Toggle the clicked experience box
+        element.classList.toggle('expanded');
+
+        // Reset all bullet points to hidden state before displaying them again
+        bulletPoints.forEach(li => {
+            li.style.opacity = 0;
+        });
+
+        // Toggle visibility and restart animation every time it's expanded
+        if (element.classList.contains('expanded')) {
+            additionalText.style.display = 'block'; // Show text
+            let delay = 0;
+
+            bulletPoints.forEach((li, index) => {
+                setTimeout(() => {
+                    li.style.opacity = 1;
+                }, delay);
+                delay += 500; // Adjust delay time for staggered effect
+            });
+        } else {
+            additionalText.style.display = 'none'; // Hide text when collapsed
+        }
     }
-}
 
 </script>
 
@@ -295,6 +330,23 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+</script>
+
+<script>
+    function copyEmail() {
+        const emailText = document.getElementById("email-text").innerText.trim();
+        navigator.clipboard.writeText(emailText).then(() => {
+            const emailContainer = document.querySelector(".email-container");
+            emailContainer.classList.add("clicked");
+
+            // Remove the copied effect after 1 second
+            setTimeout(() => {
+                emailContainer.classList.remove("clicked");
+            }, 1000);
+        }).catch(err => {
+            console.error("Failed to copy: ", err);
+        });
+    }
 </script>
 
 
