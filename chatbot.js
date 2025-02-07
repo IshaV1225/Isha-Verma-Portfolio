@@ -1,20 +1,27 @@
+const apiUrl = "https://portfolio-chatbot-q9fb.onrender.com/chat"; // Render URL
+
 async function sendMessage() {
     const userInput = document.getElementById("user-input").value;
-    if (!userInput) return;
+    const chatBox = document.getElementById("chat-box");
 
-    document.getElementById("chat-messages").innerHTML += `<p><b>You:</b> ${userInput}</p>`;
+    if (!userInput.trim()) return;
+
+    chatBox.innerHTML += `<div><strong>You:</strong> ${userInput}</div>`;
 
     try {
-        const response = await fetch("https://portfolio-chatbot.onrender.com/chat", {  // Use Render URL
+        const response = await fetch(apiUrl, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message: userInput })
         });
 
         const data = await response.json();
-        document.getElementById("chat-messages").innerHTML += `<p><b>Bot:</b> ${data.reply}</p>`;
+        chatBox.innerHTML += `<div><strong>Bot:</strong> ${data.reply}</div>`;
     } catch (error) {
-        document.getElementById("chat-messages").innerHTML += `<p><b>Bot:</b> Sorry, something went wrong.</p>`;
-        console.error("Chatbot API Error:", error);
+        console.error("Error:", error);
+        chatBox.innerHTML += `<div><strong>Bot:</strong> Sorry, something went wrong.</div>`;
     }
+
+    document.getElementById("user-input").value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
