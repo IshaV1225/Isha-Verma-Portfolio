@@ -179,20 +179,28 @@ nav ul li a:hover::after{
 }
 .experience-list div{
     background: #262626;
-    padding: 40px;
+    padding: 30px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 15px;
     transition: background 0.5s, transform 0.5s;
 }
 .experience-list div i{
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 20px;
+    align-items: center;
 }
 .experience-list div h2{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
+    text-align: center;
+}
+.experience-list div h3{
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    text-align: center;
 }
 .experience-list div a{
     text-decoration: none;
@@ -202,21 +210,22 @@ nav ul li a:hover::after{
     display: none;
 }
 .experience-item {
-    height: 200px; /* Default collapsed height */
+    height: 200px;
+    width: 90%;
     background: #ff004f;
     color: white;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 8px;
     cursor: pointer;
-    width: 450px;
     position: relative;
     overflow: hidden;
     transition: height 0.4s ease-in-out, padding 0.3s ease-in-out;
 }
 /* Expanded State */
 .experience-item.expanded {
-    height: 450px; /* Adjust expanded height */
+    height: auto; /* Adjust expanded height */
     background: #ff004f; /* Highlight the expanded box */
+    overflow: hidden;
 }
 .experience-item ul{
     padding-top: 9px;
@@ -262,6 +271,7 @@ nav ul li a:hover::after{
 .project{
     border-radius: 10px;
     position: relative;
+    cursor: pointer;
     overflow: hidden;
 }
 
@@ -511,16 +521,7 @@ nav .fa-solid{
         padding: none;
         margin-top: 0;
         overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
-    .experience-list{
-        width: 20%;
-        max-width: 100vw;
-        padding-right: 16px; /* Adjust as needed */
-    }
-
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
