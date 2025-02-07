@@ -202,15 +202,13 @@ nav ul li a:hover::after{
     display: none;
 }
 .experience-item {
-    position: relative;
-    width: 400px; /* Default width */
     height: 200px; /* Default collapsed height */
     background: #ff004f;
     color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 15px;
     cursor: pointer;
-    width: 400px;
+    width: 450px;
     position: relative;
     overflow: hidden;
     transition: height 0.4s ease-in-out, padding 0.3s ease-in-out;
@@ -444,6 +442,14 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 600px){
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .container{
+        padding: 9px 9%;
+    }
     #header{
         background-image: url(Images/small-screen-background.jpg);
     }
@@ -505,7 +511,16 @@ nav .fa-solid{
         padding: none;
         margin-top: 0;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    .experience-list{
+        width: 20%;
+        max-width: 100vw;
+        padding-right: 16px; /* Adjust as needed */
+    }
+
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
